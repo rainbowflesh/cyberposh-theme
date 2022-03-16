@@ -1,0 +1,118 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "text",
+                    "style": "plain",
+                    "foreground": "#3ce6bf",
+                    "properties": {
+                        "template": " {{ .UserName }}@{{ .HostName }}~",
+                        "prefix": "\u256D",
+                        "enable_hyperlink": true
+                    }
+                },
+                {
+                    "type": "path",
+                    "style": "plain",
+                    "foreground": "#f48fb1",
+                    "properties": {
+                        "style": "mixed",
+                        "home_icon": "\u5B85",
+                        "folder_separator_icon": "\\",
+                        "enable_hyperlink": true
+                    }
+                },
+                {
+                    "type": "git",
+                    "style": "plain",
+                    "foreground": "#62beff",
+                    "properties": {
+                        "fetch_status": true,
+                        "powerline_symbol": "\ue0b0",
+                        "branch_identical_icon": "≡",
+                        "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} "
+                    }
+                },
+                {
+                    "type": "python",
+                    "style": "powerline",
+                    "foreground": "#b1ff4f",
+                    "properties": {
+                        "prefix": "\u005b🐍 ",
+                        "postfix": "\u005D "
+                    }
+                },
+                {
+                    "type": "node",
+                    "style": "plain",
+                    "foreground": "#98C379",
+                    "properties": {
+                        "display_version": true,
+                        "prefix": "<#ffffff>\u25E6</> \u2622"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "prompt",
+            "alignment": "right",
+            "newline": false,
+            "segments": [
+                {
+                    "type": "exit",
+                    "style": "plain",
+                    "foreground": "#fb0207",
+                    "properties": {
+                        "template": "×××"
+                    }
+                },
+                {
+                    "type": "time",
+                    "style": "plain",
+                    "foreground": "#81c784",
+                    "properties": {
+                        "time_format": "15:04:05"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "text",
+                    "style": "plain",
+                    "foreground": "#3ce6bf",
+                    "properties": {
+                        "prefix": "\u2570",
+                        "text": " #"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "rprompt",
+            "alignment": "right",
+            "newline": false,
+            "segments": [
+                {
+                    "type": "executiontime",
+                    "style": "plain",
+                    "foreground": "#4dd0e1",
+                    "properties": {
+                        "threshold": 0,
+                        "style": "austin",
+                        "postfix": "\u2936"
+                    }
+                }
+            ]
+        }
+    ]
+}
